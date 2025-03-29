@@ -8,10 +8,7 @@ terraform {
   required_version = ">= 1.5.0"
 }
 
-provider "aws" {
-  profile = "default"
-  region  = "us-west-2"
-}
+provider "aws" {}
 
 #https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/lightsail_instance
 resource "aws_lightsail_instance" "server" {
