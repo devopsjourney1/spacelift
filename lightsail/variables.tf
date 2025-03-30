@@ -1,7 +1,7 @@
 variable "instance_count" {
   type        = number
   description = "The number of instances to provision"
-  default     = 1
+  default     = 3
 }
 
 variable "availability_zone" {
