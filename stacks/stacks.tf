@@ -17,7 +17,7 @@ resource "aws_iam_role" "lightsail-stack" {
     Version   = "2012-10-17"
     Statement = [
       jsondecode(
-        spacelift_stack.managed-stack.aws_assume_role_policy_statement
+        spacelift_stack.lightsail-stack.aws_assume_role_policy_statement
       )
     ]
   })
@@ -25,7 +25,7 @@ resource "aws_iam_role" "lightsail-stack" {
 
 # Attaching a policy to it
 resource "aws_iam_role_policy_attachment" "managed-stack" {
-  role       = aws_iam_role.managed-stack.name
+  role       = aws_iam_role.lightsail-stack.name
   policy_arn = "arn:aws:iam::aws:policy/PowerUserAccess"
 }
 
