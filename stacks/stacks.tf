@@ -1,10 +1,3 @@
-resource "github_team" "stack-readers" {
-  name = "managed-stack-readers"
-}
-
-resource "github_team" "stack-writers" {
-  name = "managed-stack-writers"
-}
 
 resource "spacelift_stack" "lightsail-stack" {
   name = "lightsail-servers"
