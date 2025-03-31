@@ -7,10 +7,3 @@ resource "spacelift_stack" "lightsail-stack" {
   branch = "main"
   project_root = "lightsail"
 }
-
-
-# Telling Spacelift stack to assume it.
-resource "spacelift_stack_aws_role" "lightsail-stack" {
-  stack_id = spacelift_stack.lightsail-stack.id
-  role_arn = "arn:aws:iam::688062348185:role/spacelift"
-}
