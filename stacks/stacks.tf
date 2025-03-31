@@ -3,7 +3,6 @@ resource "spacelift_stack" "lightsail-stack" {
   name = "lightsail-servers"
   space_id = "root"
 
-  namespace = "devopsjourney1"
   repository = "spacelift"
   branch = "main"
   project_root = "lightsail"
