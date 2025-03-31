@@ -14,14 +14,6 @@ resource "spacelift_stack" "lightsail-stack" {
   repository = "spacelift"
   branch = "main"
   project_root = "lightsail"
-
-  terraform_version = "1.9.0"
-  terraform_workflow_tool = "OPEN_TOFU"
-  terraform_smart_sanitization = true
-
-  additional_project_globs = [""]
-  enable_well_known_secret_masking = true
-  github_action_deploy = false  
 }
 
 
