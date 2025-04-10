@@ -2,7 +2,7 @@
 # Ligthsail
 
 resource "spacelift_stack" "lightsail-stack" {
-  name = "lightsail-servers"
+  name = "lightsail-stack"
   space_id = "root"
 
   repository = "spacelift"
@@ -40,7 +40,7 @@ resource "spacelift_stack_aws_role" "lightsail-stack" {
 # EKS Dev
 
 resource "spacelift_stack" "eks-dev" {
-  name = "eks-servers"
+  name = "eks-stack"
   space_id = "root"
 
   repository = "spacelift"
@@ -76,10 +76,10 @@ resource "spacelift_stack_aws_role" "eks-dev" {
 }
 
 
-# ECR STack
+# ECR Stack
 
 resource "spacelift_stack" "ecr-stack" {
-  name = "eks-stack"
+  name = "ecr-stack"
   space_id = "root"
 
   repository = "spacelift"
@@ -115,10 +115,10 @@ resource "spacelift_stack_aws_role" "ecr-stack" {
 }
 
 
-# Production servers
+# Production stack
 
 resource "spacelift_stack" "production-stack" {
-  name = "eks-servers"
+  name = "production-stack"
   space_id = "root"
 
   repository = "spacelift"
