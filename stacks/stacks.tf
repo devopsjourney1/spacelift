@@ -64,7 +64,7 @@ resource "aws_iam_role" "eks-dev" {
 }
 
 # Attaching a policy to it
-resource "aws_iam_role_policy_attachment" "managed-stack" {
+resource "aws_iam_role_policy_attachment" "eks-dev" {
   role       = aws_iam_role.eks-dev.name
   policy_arn = "arn:aws:iam::aws:policy/PowerUserAccess"
 }
