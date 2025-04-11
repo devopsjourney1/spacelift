@@ -1,3 +1,18 @@
+terraform {
+  required_version = ">= 1.8"
+
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = ">= 5.34"
+    }
+  }
+}
+
+provider "aws" {
+  region = "us-west-2"
+}
+
 # module "secrets_manager" {
 #   source  = "terraform-aws-modules/secrets-manager/aws"
 #   version = "~> 1.1"
