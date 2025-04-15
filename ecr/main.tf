@@ -41,10 +41,5 @@ module "ecr" {
       ecr_repository_prefix = "quay"
       upstream_registry_url = "quay.io"
     }
-    dockerhub = {
-      ecr_repository_prefix = "docker-hub"
-      upstream_registry_url = "registry-1.docker.io"
-    #   credential_arn        = module.secrets_manager.secret_arn
-    }
   }
 }
